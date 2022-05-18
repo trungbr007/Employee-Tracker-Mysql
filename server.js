@@ -1,4 +1,3 @@
-const mysql = require('mysql2');
 const inputCheck = require('./utils/inputCheck');
 const express = require('express');
 
