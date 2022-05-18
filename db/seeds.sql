@@ -26,5 +26,24 @@ VALUES
   ('Sales manager',90000,5);
   
   
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES
+  ('Ronald', 'Firbank', 1, 1),
+  ('Virginia', 'Woolf', 2, 1),
+  ('Piers', 'Gaveston', 3, NULL),
+  ('Charles', 'LeRoi', 4, NULL),
+  ('Katherine', 'Mansfield', 5, 1),
+  ('Dora', 'Carrington', 6, NULL),
+  ('Edward', 'Bellamy', 7, 0),
+  ('Montague', 'Summers', 8, NULL),
+  ('Octavia', 'Butler', 9, 1),
+  ('Unica', 'Zurn', 1, NULL),
+  ('Paul', 'Scholes', 10, 1),
+  ('Lionel', 'Messi', 11, NULL),
+  ('Cristiano', 'Ronaldo', 12, 0),
+  ('Heung', 'Son', 13, NULL),
+  ('Peter', 'Nguyen', 14, 1),
+  ('Kylian', 'Mbape', 2, NULL);
+
   
   
