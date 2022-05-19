@@ -80,7 +80,5 @@ function employeePrompts() {
     });
 };
 
-
-
 //Start the application
 mainPrompts();
