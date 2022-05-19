@@ -80,5 +80,73 @@ function employeePrompts() {
     });
 };
 
+
+
+//prompting to update role
+function updateRole() {
+   
+    db.query(`SELECT * FROM employee`, (err, res) => {
+        if(err) throw err
+    
+    const employeeList = res.map((employee) => ({name: employee.last_name + ", " + employee.first_name, value: employee.id}))
+    inquirer
+    .prompt([
+        {
+        type:'list',
+        name: 'updateEmployee',
+        message: 'Which employee would you like to update?',
+        choices: employeeList
+        },
+        {
+        type: 'list',
+        name: 'oldRole',
+        message: "What is employee's old role id?",
+        choices: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+        },
+        {
+        type: 'list',
+        name: 'newRole',
+        message: "What is employee's new role id?",
+        choices: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+        }  
+    
+    ])
+    .then(function (ans) {
+    const sql = `UPDATE employee SET role_id = ?;`;
+    db.query(sql, [ans.newRole, ans.oldRole], (err, res) => {
+        if (err) throw err;
+        console.log("Employee's role has been changed.");
+        mainPrompts();
+    });
+    });
+});
+    
+
+};
+
+//Add new department
+function departmentPrompts() {
+    inquirer
+    .prompt([
+        {
+            type: 'input',
+            name: 'departmentName',
+            message: 'What department would you like to add?'
+        }
+    ])
+    .then(function (ans) {
+            const sql = `INSERT INTO department(name)
+            VALUES (?);`;
+            db.query(sql, ans.departmentName, (err, res) => {
+                if (err) throw err;
+                console.log('New department has been added.');
+                loadMainPrompts();
+            });
+        
+    });
+};
+
+
+
 //Start the application
 mainPrompts();
