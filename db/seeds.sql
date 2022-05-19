@@ -12,7 +12,7 @@ VALUES
   ('Full Stack Developer',99000,1),
   ('Front-End Dev',70000,1),
   ('Back-End Dev',75000,1),
-  ('IT help',50000,1),
+  ('IT helper',50000,1),
   ('Recruiter',65000,2),
   ('HR information specialist',60000,2),
   ('Digital Marketer',72000,3),
@@ -29,20 +29,19 @@ VALUES
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES
   ('Ronald', 'Firbank', 1, 1),
-  ('Virginia', 'Woolf', 2, 1),
-  ('Piers', 'Gaveston', 3, NULL),
+  ('Virginia', 'Woolf', 2, NULL),
+  ('Piers', 'Gaveston', 3, 3),
   ('Charles', 'LeRoi', 4, NULL),
-  ('Katherine', 'Mansfield', 5, 1),
-  ('Dora', 'Carrington', 6, NULL),
-  ('Edward', 'Bellamy', 7, 0),
-  ('Montague', 'Summers', 8, NULL),
-  ('Octavia', 'Butler', 9, 1),
+  ('Katherine', 'Mansfield', 5, 2),
+  ('Dora', 'Carrington', 6, 4),
+  ('Edward', 'Bellamy', 7, 5),
+  ('Montague', 'Summers', 9,NULL),
+  ('Octavia', 'Butler', 9, NULL),
   ('Unica', 'Zurn', 1, NULL),
-  ('Paul', 'Scholes', 10, 1),
+  ('Paul', 'Scholes', 10, 6),
   ('Lionel', 'Messi', 11, NULL),
-  ('Cristiano', 'Ronaldo', 12, 0),
   ('Heung', 'Son', 13, NULL),
-  ('Peter', 'Nguyen', 14, 1),
+  ('Peter', 'Nguyen', 14, 7),
   ('Kylian', 'Mbape', 2, NULL);
 
   
