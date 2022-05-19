@@ -146,6 +146,39 @@ function departmentPrompts() {
     });
 };
 
+//view list of all employees
+function viewEmployees() {
+    const sql = `SELECT * FROM employee ORDER BY last_name`;
+    db.query(sql, (err, results) => {
+        if (err) throw err;
+        console.log('All employees listed alphabetically by last name');
+        console.table(results)
+    })
+    mainPrompts();
+};
+
+//view List of all Roles
+function viewRoles() {
+const sql = `SELECT * FROM role`;
+db.query(sql, (err, results) => {
+    if (err) throw err;
+    console.log('All roles listed.');
+    console.table(results)
+})
+mainPrompts();
+};
+
+//view list of all Departments
+function viewDepartments() {
+const sql = `SELECT * FROM department`;
+db.query(sql, (err, results) => {
+    if (err) throw err;
+    console.log('Departments listed')
+    console.table(results)
+})
+mainPrompts();
+}; 
+
 
 
 //Start the application
