@@ -8,7 +8,7 @@ const mainPrompts = () => {
         {
             type: 'list',
             name: 'choice',
-            message: 'What would you like to do?',
+            message: 'What would you like to?',
             choices: ['Add Employee', 'Add Role', 'Add Department', 'Update Role', 'View all Employees', 'View all Roles', 'View all Departments'
             ]
         }
