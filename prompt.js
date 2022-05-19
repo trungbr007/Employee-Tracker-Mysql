@@ -140,7 +140,7 @@ function departmentPrompts() {
             db.query(sql, ans.departmentName, (err, res) => {
                 if (err) throw err;
                 console.log('New department has been added.');
-                loadMainPrompts();
+                mainPrompts();
             });
         
     });
